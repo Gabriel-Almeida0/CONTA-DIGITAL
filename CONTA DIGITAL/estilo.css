@@ -1,0 +1,269 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background-color: #e8e8e8;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #1c8e4a;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+/* Estilo do ícone do logo com dois retângulos inclinados */
+.logo-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.rectangle {
+    position: absolute;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.rectangle.one {
+    width: 32.04px;
+    height: 18.24px;
+    top: 10px;
+    left: 8px;
+    transform: rotate(54.41deg);
+}
+
+.rectangle.two {
+    width: 35.56px;
+    height: 18.24px;
+    top: 10px;
+    left: -17.5px;
+    transform: rotate(54.41deg);
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 10px;
+    padding: 10px 20px;
+    flex: 1;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.balance-card {
+    background-color: #1c8e4a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 8px;
+}
+
+.totals-transactions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.totals {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.totals div {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.totals .entradas p {
+    color: #1c8e4a;
+    font-weight: bold;
+}
+
+.totals .saidas p {
+    color: #f00;
+    font-weight: bold;
+}
+
+.advertising {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.advertising img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.advertising-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(28, 142, 74, 0.8);
+    padding: 5px;
+    color: white;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.buttons button {
+    padding: 10px;
+    font-size: 0.9em;
+    background-color: #f0f0f0;
+    color: #1c8e4a;
+    border: 2px solid #1c8e4a;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.buttons button:hover {
+    background-color: #cfe8d1;
+}
+
+.transactions, .pix-area {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1;
+}
+
+.transactions h3, .pix-area h3 {
+    margin-bottom: 10px;
+    color: #1c8e4a;
+    font-size: 1em;
+}
+
+.transactions ul {
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.transactions ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    font-size: 0.8em;
+}
+
+.transactions ul li i {
+    color: #1c8e4a;
+    margin-right: 10px;
+}
+
+/* Estilo da área PIX */
+.pix-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.pix-tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.pix-tabs button.active {
+    background-color: #1c8e4a;
+    color: white;
+}
+
+.pix-tabs button.inactive {
+    background-color: #f4f4f4;
+    color: #f00;
+}
+
+.pix-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pix-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.pix-form button {
+    padding: 10px;
+    background-color: #1c8e4a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c8e4a;
+    color: white;
+}

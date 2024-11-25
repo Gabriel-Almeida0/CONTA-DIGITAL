@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankSE - Dashboard Financeiro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">
+                <div class="rectangle one"></div>
+                <div class="rectangle two"></div>
+            </div>
+            <h1 style="font-size: 1.2em;">Bank SE</h1>
+        </div>
+        <div class="profile">
+            <p>Olá, Fulano</p>
+            <i class="fas fa-user-circle fa-lg"></i>
+        </div>
+    </header>
+
+    <div class="content">
+        <div>
+            <div class="balance-card">
+                Conta <br>
+                <span id="saldo">R$ 10,00</span>
+            </div>
+
+            <div class="advertising">
+                <img src="Captura de tela 2024-11-24 182535.png" alt="Seguros">
+                <div class="advertising-overlay">
+                    <i class="fas fa-shield-alt"></i> Bank SE - Seguros
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="btnPix">
+                    <i class="mdi mdi-qrcode-scan"></i> Área PIX
+                </button>
+                <button id="btnPagar">
+                    <i class="fas fa-money-bill-wave"></i> Pagar
+                </button>
+                <button id="btnInvestir">
+                    <i class="fas fa-chart-line"></i> Investir
+                </button>
+            </div>
+        </div>
+        <div class="totals-transactions">
+            <div class="totals">
+                <div class="entradas">
+                    <h3>Entradas</h3>
+                    <p id="entradas">R$ 10,00</p>
+                </div>
+                <div class="saidas">
+                    <h3>Saídas</h3>
+                    <p id="saidas">R$ 0,00</p>
+                </div>
+            </div>
+
+            <div class="transactions" id="transactionArea">
+                <h3>Últimas transações</h3>
+                <ul id="transactionList">
+                    <li>Não constam transações</li>
+                </ul>
+            </div>
+
+            <!-- Área PIX - Inicialmente escondida -->
+            <div class="pix-area" id="pixArea" style="display: none;">
+                <div class="pix-tabs">
+                    <button id="btnReceber" class="active">Receber</button>
+                    <button id="btnTransferir" class="inactive">Transferir</button>
+                </div>
+                <form class="pix-form" id="pixForm">
+                    <input type="text" id="chavePix" placeholder="Chave PIX (CPF/CNPJ)">
+                    <input type="number" id="valorPix" placeholder="Valor R$">
+                    <button type="button" id="btnConfirmarPix">CONFIRMAR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 BankSE - Desenvolvido por: Josimar Santos
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
